@@ -1,3 +1,4 @@
+let nomeIsOk;
 function validaEmail(event){
     // pega o valor digitado no elemento input
     const inputEmail = event.target;
@@ -18,38 +19,6 @@ function validaTelefone(event){
     console.log(formatedPhone);
     inputPhone.value = !formatedPhone[2] ? formatedPhone[1] : '(' + formatedPhone[1] + ') ' + formatedPhone[2] + (formatedPhone[3] ? '-' + formatedPhone[3] : '');
 }
-/* adiciona mascara para rg
- * Cada estado têm regras e quantidades diferentes de números no registro. Por isso,
- *não há uma maneira confiável de fazer a validação do mesmo.
- */
- function MascaraRg(event,errChar='?'){
-    
-    const v0 = event.currentTarget.value;
-     
-     console.log(event);
-     const v = v0.toUpperCase().replace(/[^\dX]/g,'');
-     event.currentTarget.value = (v.length==8 || v.length==9)?
-     v.replace(/^(\d{1,2})(\d{3})(\d{3})([\dX])$/,'$1.$2.$3-$4'):
-     (""+v0);
-     return (v.length==8 || v.length==9)?
-        v.replace(/^(\d{1,2})(\d{3})(\d{3})([\dX])$/,'$1.$2.$3-$4'):
-        (errChar)
-     ;
- 
- } 
- /* adiciona mascara para rg
-  * Cada estado têm regras e quantidades diferentes de números no registro. Por isso,
-  *não há uma maneira confiável de fazer a validação do mesmo.
-  */
-  function MascaraCPF(event,errChar='?'){
-     const v0 = event.currentTarget.value;
-     console.log(v0);
-     const v = v0.toUpperCase().replace(/[^\dX]/g,'');
-     event.currentTarget.value = (v.length==11 )?
-     v.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/,'$1.$2.$3-$4'):
-     (errChar+v0);
-     return v;
-     ;
- 
- } 
- 
+function validaForm(event){
+
+}
