@@ -11,13 +11,19 @@
           <form id="contact" action="" method="post">
             <h3>Formulário de cadastro</h3>        
             <fieldset>
-              <input placeholder="Nome" type="text" tabindex="1" required autofocus>
+              <input placeholder="Insira o Nome" type="text" tabindex="1" required autofocus>
             </fieldset>
             
               <input placeholder="Endereço de email" type="text" tabindex="2" onkeyup="validaEmail(event)" required></input>
             
             <fieldset>
-              <input placeholder="Número de Telefone" type="text" tabindex="3" required oninput="validaTelefone(event)">
+              <input placeholder="(98) 98888-8888" type="text" tabindex="3" required oninput="validaTelefone(event)">
+            </fieldset>            
+            <fieldset>
+              <input placeholder="000.000.000-00" type="text" tabindex="4" oninput="validaCPF(event)">
+            </fieldset>            
+            <fieldset>
+              <input placeholder="00000,00" type="text" tabindex="5" oninput="validaRenda(event)">
             </fieldset>            
             <fieldset>
               <button name="submit" type="submit" id="contact-submit" data-submit="...Enviando">Enviar</button>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+    <head>
+        <meta charset="UTF-8">
+        <title>formulario de cadastro</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="js/validation.js" defer></script>
+    </head>
+    <body>
+       <div class="container">  
+          <div id="contact" action="" method="post">
+            <h3>Fazer Login</h3>        
+            <fieldset>
+              <input id="user" placeholder="Usuário" type="text" tabindex="1" >
+            </fieldset>
+              <input id="senha" placeholder="Senha" type="password" tabindex="2"></input>
+              <a name="submit" onclick="mostrarSenha(event)" href="#">ver senha</a>
+             <span id="msgErro" hidden style="color: red;font-size: large;"> Usuário ou senha inválidos </span>                
+            <fieldset>
+              <button name="submit" id="contact-submit" onclick="fazerLogin(event)">Login</button>
+            </fieldset>
+            
+        </div>
+        </div>          
+
+    </body>
+
+</html>
